@@ -1,0 +1,28 @@
+.active-link {
+  background-color: rgb(0, 0, 0);
+  a {
+    color: rgb(255, 255, 255);
+  }
+}
+
+.nav-link {
+  background-color: #F7BFD8;
+  a {
+    color: rgb(0, 0, 0);
+  }
+}
+
+.bg-body-tertiary {
+  background-color: #F7BFD8;
+}
+
+.icono-derecha {
+  width: 35px;
+  height: auto;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+#navbarNav {
+  display: flex;
+  justify-content: flex-end;
+} 
