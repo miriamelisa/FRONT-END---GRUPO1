@@ -13,6 +13,7 @@ import { PagenotfoundModule } from './pag/pagenotfound/pagenotfound.module';
 import { SharedModule } from './shared/shared.module';
 import { ComponentModule } from './shared/component/component.module';
 import { PagModule } from './pag/pag.module';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent
@@ -32,7 +33,8 @@ import { PagModule } from './pag/pag.module';
     InfModule,
     LoginModule,
     ManagementModule,
-    PagenotfoundModule
+    PagenotfoundModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

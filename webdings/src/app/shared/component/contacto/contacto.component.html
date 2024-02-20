@@ -1,17 +1,26 @@
 <div class="container-fluid">
   <p>NOS PONEMOS EN CONTACTO CONTIGO</p>
-    <form>
-      <div class="mb-2">
-        <input type="email" class="form-control" id="email" placeholder="Email">
-      </div>
-      <div class="mb-2">
-        <input type="text" class="form-control" id="nombre" placeholder="Nombre">
-      </div>
-      <div class="mb-2">
-        <input type="tel" class="form-control" id="movil" placeholder="Número de móvil">
-      </div>
-      <div class="mb-2">
+  <form (ngSubmit)="enviarFormulario()">
+    <div class="mb-2">
+      <input type="email" class="form-control" name="email" placeholder="Email" [(ngModel)]="email">
+    </div>
+    <div class="mb-2">
+      <input type="text" class="form-control" name="nombre" placeholder="Nombre" [(ngModel)]="nombre">
+    </div>
+    <div class="mb-2">
+      <input type="tel" class="form-control" name="movil" placeholder="Número de móvil" [(ngModel)]="movil">
+    </div>
+    <div class="mb-2">
       <button type="submit" class="btn btn-primary btn-block">Enviar</button>
     </div>
-    </form>
+  </form>
+  <div>
+    <h2>Datos Enviados</h2>
+    <ul>
+      <li *ngFor="let dato of datosEnviados">
+        <strong>Email:</strong> {{ dato.email }}, <strong>Nombre:</strong> {{ dato.nombre }}, <strong>Móvil:</strong> {{ dato.movil }}
+      </li>
+    </ul>
   </div>
+  
+</div>
