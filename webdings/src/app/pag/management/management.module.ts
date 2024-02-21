@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ManagementComponent } from './management.component';
+import { CardServComponent } from 'src/app/shared/component/card-serv/card-serv.component';
 
 
 
 @NgModule({
   declarations: [
-    ManagementComponent
+    ManagementComponent,
+    CardServComponent
   ],
   imports: [
     CommonModule
