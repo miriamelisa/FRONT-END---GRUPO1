@@ -1,51 +1,105 @@
 <div class="container">
   <div class="row">
+    <!-- Div de Información del Cliente -->
     <div class="col-md-6">
-      <div class="card">
+      <div class="card border-0">
         <div class="card-body">
-          <h5 class="card-title">Calendario</h5>
-          <label for="fecha">Selecciona una fecha:</label>
-          <input class="form-control" id="fecha" placeholder="dd/mm/yyyy" [(ngModel)]="fechaSeleccionada" ngbDatepicker
-            #dp="ngbDatepicker">
-          <button class="btn btn-outline-secondary calendar-icon" (click)="dp.toggle()" type="button"></button>
+          <h5 class="card-title">Información del Cliente</h5>
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" class="form-control" id="nombre">
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="text" class="form-control" id="telefono">
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="servicio">Servicio:</label>
+            <input type="text" class="form-control" id="servicio">
+          </div>
+          <div class="text-right">
+            <button class="btn btn-primary" type="button">
+              <img src="assets/lupa.png" alt="Buscar">
+            </button>
+          </div>
         </div>
       </div>
     </div>
+    <!-- Div de Paquetes -->
     <div class="col-md-6">
-      <div class="card">
+      <div class="card border-0">
         <div class="card-body">
-          <h5 class="card-title">Estado:</h5>
+          <h5 class="card-title">Paquetes</h5>
           <div class="form-group">
-            <label for="estadoPedido">Selecciona el estado del pedido:</label>
-            <select class="form-control" id="estadoPedido">
-              <option value="pendiente">Pendiente</option>
-              <option value="en-proceso">Esperando el pago</option>
-              <option value="cancelado">Cancelado</option>
+            <label for="paquetes">Selecciona un paquete:</label>
+            <select class="form-control" id="paquetes">
+              <option value="paquete1">Paquete 1</option>
+              <option value="paquete2">Paquete 2</option>
+              <option value="paquete3">Paquete 3</option>
             </select>
           </div>
         </div>
       </div>
     </div>
   </div>
-
+  <!-- Div Productos y Factura -->
   <div class="row mt-3">
-    <div class="col-md-12">
-      <div class="card">
+    <div class="col-md-6">
+      <div class="card border">
         <div class="card-body">
-          <h5 class="card-title">Datos del Cliente</h5>
+          <h5 class="card-title">Lista de Productos</h5>
           <div class="form-group">
-            <label for="cliente">Clientes:</label>
-            <input type="text" class="form-control" id="cliente" [value]="carta.cliente.nombreCliente[0]">
-            <input type="text" class="form-control" id="idCliente" [value]="carta.cliente.idClientes[0]">
-            <input type="text" class="form-control" id="telefonoCliente" [value]="carta.cliente.tlf[0]">
-            <input type="email" class="form-control" id="emailCliente" [value]="carta.cliente.email[0]">
+            <label for="personas">Número de personas:</label>
+            <input type="number" class="form-control" id="personas">
           </div>
+          <div class="producto border d-flex justify-content-between">
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="catering1">
+              <label class="form-check-label" for="catering1">Catering</label>
+            </div>
+            <span>1200€</span>
+          </div>
+          <div class="producto border d-flex justify-content-between">
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="catering2">
+              <label class="form-check-label" for="catering2">Catering</label>
+            </div>
+            <span>1200€</span>
+          </div>
+          <div class="producto border d-flex justify-content-between">
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="catering3">
+              <label class="form-check-label" for="catering3">Catering</label>
+            </div>
+            <span>1200€</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Div de Factura -->
+    <div class="col-md-6">
+      <div class="card border">
+        <div class="card-body">
+          <h5 class="card-title">Factura</h5>
+          <div>Número de factura: 12345</div>
+          <div>Fecha de emisión: 21/02/2024</div>
+          <div>Total: $60</div>
+          <div class="text-center">
+            <button class="btn btn-primary" type="button">Generar factura</button>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-</body>
-
-</html>
