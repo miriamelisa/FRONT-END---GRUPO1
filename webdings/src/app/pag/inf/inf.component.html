@@ -1,18 +1,17 @@
-<p>inf works!</p>
-<div class="container">
-    <div class="row">
+<div class="container-fluid">
+    <div class="row bg-verde">
       <div class="col-md-6">
-        <div class="card">
+        <div class="card border-0 bg-verde">
           <div class="card-body">
             <h5 class="card-title">Calendario</h5>
             <label for="fecha">Selecciona una fecha:</label>
-            <input class="form-control" id="fecha" placeholder="dd/mm/yyyy" [(ngModel)]="fechaSeleccionada" ngbDatepicker data-provide="datepicker">
+            <input class="date" id="fecha" placeholder="dd/mm/yyyy" [(ngModel)]="fechaSeleccionada" ngbDatepicker data-provide="datepicker">
             <button class="btn btn-outline-secondary calendar-icon" (click)="toggleCalendar()" type="button"></button>
           </div>
         </div>
       </div>
       <div class="col-md-6 d-flex justify-content-center align-items-center">
-        <div class="card">
+        <div class="card border-0 bg-verde">
           <div class="card-body">
             <h5 class="card-title">Estado:</h5>
             <div class="form-group">
@@ -23,6 +22,22 @@
                 <option value="cancelado">Cancelado</option>
               </select>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Datos del Cliente</h5>
+          <div class="form-group">
+            <label for="cliente">Clientes:</label>
+            <input type="text" class="form-control" id="cliente" [value]="">
+            <input type="text" class="form-control" id="idCliente" [value]="">
+            <input type="text" class="form-control" id="telefonoCliente" [value]="">
+            <input type="email" class="form-control" id="emailCliente" [value]="">
           </div>
         </div>
       </div>

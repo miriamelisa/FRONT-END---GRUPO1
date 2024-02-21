@@ -14,6 +14,7 @@ import { SharedModule } from './shared/shared.module';
 import { ComponentModule } from './shared/component/component.module';
 import { PagModule } from './pag/pag.module';
 import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -34,7 +35,7 @@ import { FormsModule } from '@angular/forms';
     LoginModule,
     ManagementModule,
     PagenotfoundModule,
-    
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
