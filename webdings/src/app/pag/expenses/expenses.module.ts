@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { ExpensesComponent } from './expenses.component';
 
 
-
 @NgModule({
   declarations: [
     ExpensesComponent

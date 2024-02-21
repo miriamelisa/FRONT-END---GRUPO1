@@ -33,8 +33,7 @@ import { FormsModule } from '@angular/forms';
     InfModule,
     LoginModule,
     ManagementModule,
-    PagenotfoundModule,
-    FormsModule
+    PagenotfoundModule
   ],
   providers: [],
   bootstrap: [AppComponent]
