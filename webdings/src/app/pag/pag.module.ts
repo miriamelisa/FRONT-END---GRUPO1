@@ -4,7 +4,6 @@ import { PagComponent } from './pag.component';
 
 
 
-
 @NgModule({
   declarations: [
     PagComponent

@@ -10,6 +10,8 @@ import { CardServComponent } from './card-serv.component';
   ],
   imports: [
     CommonModule
+  ], exports:[
+    CardServComponent
   ]
 })
 export class CardServModule { }
