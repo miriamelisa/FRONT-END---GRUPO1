@@ -1,29 +1,51 @@
 <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Calendario</h5>
-            <label for="fecha">Selecciona una fecha:</label>
-            <input class="form-control" id="fecha" placeholder="dd/mm/yyyy" [(ngModel)]="fechaSeleccionada" ngbDatepicker #dp="ngbDatepicker">
-            <button class="btn btn-outline-secondary calendar-icon" (click)="dp.toggle()" type="button"></button>
-          </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Calendario</h5>
+          <label for="fecha">Selecciona una fecha:</label>
+          <input class="form-control" id="fecha" placeholder="dd/mm/yyyy" [(ngModel)]="fechaSeleccionada" ngbDatepicker
+            #dp="ngbDatepicker">
+          <button class="btn btn-outline-secondary calendar-icon" (click)="dp.toggle()" type="button"></button>
         </div>
       </div>
-      <div class="col-md-6 d-flex justify-content-center align-items-center">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Estado:</h5>
-            <div class="form-group">
-              <label for="estadoPedido">Selecciona el estado del pedido:</label>
-              <select class="form-control" id="estadoPedido">
-                <option value="pendiente">Pendiente</option>
-                <option value="en-proceso">Esperando el pago</option>
-                <option value="cancelado">Cancelado</option>
-              </select>
-            </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Estado:</h5>
+          <div class="form-group">
+            <label for="estadoPedido">Selecciona el estado del pedido:</label>
+            <select class="form-control" id="estadoPedido">
+              <option value="pendiente">Pendiente</option>
+              <option value="en-proceso">Esperando el pago</option>
+              <option value="cancelado">Cancelado</option>
+            </select>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+  <div class="row mt-3">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Datos del Cliente</h5>
+          <div class="form-group">
+            <label for="cliente">Clientes:</label>
+            <input type="text" class="form-control" id="cliente" [value]="carta.cliente.nombreCliente[0]">
+            <input type="text" class="form-control" id="idCliente" [value]="carta.cliente.idClientes[0]">
+            <input type="text" class="form-control" id="telefonoCliente" [value]="carta.cliente.tlf[0]">
+            <input type="email" class="form-control" id="emailCliente" [value]="carta.cliente.email[0]">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>
