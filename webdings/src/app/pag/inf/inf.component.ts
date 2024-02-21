@@ -11,5 +11,13 @@ export class InfComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  fechaSeleccionada: any;
+  toggleCalendar() {
+    // Busca el elemento de entrada de fecha por su ID y activa el método datepicker de Bootstrap
+    const fechaInput = document.getElementById('fecha');
+    if (fechaInput) {
+      fechaInput.dispatchEvent(new Event('focus'));
+    }
+  }
 
 }

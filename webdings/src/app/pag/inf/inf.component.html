@@ -1,1 +1,30 @@
 <p>inf works!</p>
+<div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Calendario</h5>
+            <label for="fecha">Selecciona una fecha:</label>
+            <input class="form-control" id="fecha" placeholder="dd/mm/yyyy" [(ngModel)]="fechaSeleccionada" ngbDatepicker data-provide="datepicker">
+            <button class="btn btn-outline-secondary calendar-icon" (click)="toggleCalendar()" type="button"></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 d-flex justify-content-center align-items-center">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Estado:</h5>
+            <div class="form-group">
+              <label for="estadoPedido">Selecciona el estado del pedido:</label>
+              <select class="form-control" id="estadoPedido">
+                <option value="pendiente">Pendiente</option>
+                <option value="en-proceso">Esperando el pago</option>
+                <option value="cancelado">Cancelado</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

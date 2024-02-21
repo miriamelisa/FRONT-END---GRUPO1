@@ -27,8 +27,6 @@ export class ContactoComponent implements OnInit {
     this.email = '';
     this.nombre = '';
     this.movil = '';
-    
-    console.log('Datos enviados:', this.datosEnviados);
   }
 
 }
