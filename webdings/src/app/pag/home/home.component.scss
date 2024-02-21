@@ -12,3 +12,13 @@ h1 {
     margin-left: 10%;
     font-size: 30px;
 }
+.carousel-control-prev,
+.carousel-control-next {
+  background: none;
+  border: none;
+  z-index: 1;
+}
+
+* {
+  overflow-x: hidden;
+}
